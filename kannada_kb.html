@@ -1,0 +1,167 @@
+<!--developed by vinay s. This is a minute part developed for my thesis work, so i am not changing variable names. Alter variable names as required. 
+follow me on twitter @naanuvinay. fb chikkabellavivinay. g+ chikkabellavivinay
+"fight for making information free" -->
+
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>vinay_kannada_captcha</title>
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script type='text/javascript'>
+
+
+function input(e) {
+          // Get the TextBox object.
+          var captcha_code = document.getElementById("captcha_code1");
+          // As e is the button, its value is the text on it.
+          // Add the value to the TextBox.
+          captcha_code.value = captcha_code.value + e.value;
+      }
+
+function del() {
+          // Get the TextBox object.
+          var bkspace = document.getElementById("captcha_code1");
+
+          // Remove the last char in the TextBox.
+          captcha_code1.value = captcha_code1.value.substr(0, captcha_code1.value.length - 1);
+      }
+function display_kb(){
+if(document.getElementById('sk').innerHTML=="Show board")
+{
+  k_keyboard.style.display="block";
+  document.getElementById('sk').innerHTML="Hide board";
+}
+else if(document.getElementById('sk').innerHTML=="Hide board")
+{
+  k_keyboard.style.display="none";  
+  document.getElementById('sk').innerHTML="Show board";
+}
+}
+function space() {
+          // Get the TextBox object.
+          var onespace = document.getElementById("captcha_code1").value;
+          onespace+=" ";
+          document.getElementById('captcha_code1').value=onespace;
+      }
+
+function getEntity(str){
+var buf=[];
+for(i=str.length-1;i>=0;i--)
+buf.unshift(['&#',str[i].charCodeAt(),';'].join(''));
+document.getElementById('ppp').value=buf.join('');
+}
+
+</script>
+</head>
+<body>
+<form action="" method="post" name="form1" id="form1" >
+<table id="VirtualKeyboard">
+<table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="table">
+<tr>
+<td>
+  <div>
+    <input id="captcha_code1" name="captcha_code1" type="text"  oninput="getEntity(this.value)"; onchange="getEntity(this.value)"; onmousemove="getEntity(this.value)"; onblur="getEntity(this.value)"; autofocus>
+      <a type="button" id="sk" onclick="display_kb();">Show board</a>
+<textarea name="ppp" id="ppp" style="display:none;"></textarea>
+<textarea name="aval" style="display:none;"></textarea>
+      <br>
+      <br>
+        </tr></td>
+  <tr>
+    <td colspan='2' align='center' ></div>
+<input name="Submit" type="submit" onclick="return valData();" value="Submit" class="button1"></submit>
+</div></td>
+      </tr>
+</table>
+
+
+<div class="form-group"></div>
+<div id="frame1" class="panel panel-default" rand(style= "background-color:black; border-color:#fff;");>
+<div id="k_keyboard" class="panel panel-default" style="display:none;">
+<input type="button" id="ka" class="btn btn-default" value="&#3302;" onclick="input(this);"></button>
+<input type="button" id="branah-kha" class="btn btn-default" value="&#3303;" onclick="input(this);"></button>
+<input type="button" id="branah-ga" class="btn btn-default" value="&#3304;" onclick="input(this);"></button>
+<input type="button" id="branah-gha" class="btn btn-default" value="&#3305;" onclick="input(this);"></button>
+<input type="button" id="branah-jnya" class="btn btn-default" value="&#3306;" onclick="input(this);"></button>
+<input type="button" id="branah-cha" class="btn btn-default" value="&#3307;" onclick="input(this);"></button>
+<input type="button" id="branah-chca" class="btn btn-default" value="&#3308;" onclick="input(this);"></button>
+<input type="button" id="branah-ja" class="btn btn-default" value="&#3309;" onclick="input(this);"></button>
+<input type="button" id="branah-jha" class="btn btn-default" value="&#3310;" onclick="input(this);"></button>
+<input type="button" id="branah-nya" class="btn btn-default" value="&#3311;" onclick="input(this);"></button>
+<br>
+
+<input type="button" id="branah-Ta" class="btn btn-default" value="&#3221;" onclick="input(this);"></button>
+<input type="button" id="branah-Tha" class="btn btn-default" value="&#3253;" onclick="input(this);"></button>
+<input type="button" id="branah-ta" class="btn btn-default" value="&#3251;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3248;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3205;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3211;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3206;" onclick="input(this);"></button>
+
+<br>
+
+<input type="button" id="branah-da" class="btn btn-default" value="&#3256;" onclick="input(this);"></button>
+<input type="button" id="branah-dha" class="btn btn-default" value="&#3222;" onclick="input(this);"></button>
+<input type="button" id="branah-na" class="btn btn-default" value="&#3250;" onclick="input(this);"></button>
+<input type="button" id="branah-bha" class="btn btn-default" value="&#3254;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3207;" onclick="input(this);"></button>
+
+<input type="button" id="branah-ya" class="btn btn-default" value="&#3247;" onclick="input(this);"></button>
+<input type="button" id="branah-ra" class="btn btn-default" value="&#3255;" onclick="input(this);"></button>
+<span><input type="button" id="branah-va" class="btn btn-default" value="&#3257;" onclick="input(this);"></button></span>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3208;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3210;" onclick="input(this);"></button>
+
+<br>
+
+<input type="button" id="branah-Sha" class="btn btn-default" value="&#3228;" onclick="input(this);"></button>
+<input type="button" id="branah-La" class="btn btn-default" value="&#3237;" onclick="input(this);"></button>
+<input type="button" id="branah-aa" class="btn btn-default" value="&#3224;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3209;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3214;" onclick="input(this);"></button>
+
+<input type="button" id="branah-e" class="btn btn-default" value="&#3242;" onclick="input(this);"></button>
+<input type="button" id="branah-ee" class="btn btn-default" value="&#3236;" onclick="input(this);"></button>
+<input type="button" id="branah-u" class="btn btn-default" value="&#3247;" onclick="input(this);"></button>
+<input type="button" id="branah-ru" class="btn btn-default" value="&#3225;" onclick="input(this);"></button>
+<input type="button" id="branah-ae" class="btn btn-default" value="&#3228;" onclick="input(this);"></button>
+<input type="button" id="branah-aE" class="btn btn-default" value="&#3230;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3216;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3220;" onclick="input(this);"></button><br>
+
+<input type="button" id="branah-ai" class="btn btn-default" value="&#3227;" onclick="input(this);"></button>
+<input type="button" id="branah-o" class="btn btn-default" value="&#3246;" onclick="input(this);"></button>
+<input type="button" id="branah-oo" class="btn btn-default" value="&#3240;" onclick="input(this);"></button>
+<input type="button" id="branah-ou" class="btn btn-default" value="&#3239;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3215;" onclick="input(this);"></button>
+
+<input type="button" id="branah-am" class="btn btn-default" value="&#3223;" onclick="input(this);"></button>
+<input type="button" id="branah-aha" class="btn btn-default" value="&#3231;" onclick="input(this);"></button>
+<input type="button" id="branah-ondu" class="btn btn-default" value="&#3235;" onclick="input(this);"></button>
+
+<br>
+
+<input type="button" id="branah-eradu" class="btn btn-default" value="&#3232;" onclick="input(this);"></button>
+<input type="button" id="branah-mooru" class="btn btn-default" value="&#3238;" onclick="input(this);"></button>
+<input type="button" id="branah-naalakku" class="btn btn-default" value="&#3245;" onclick="input(this);"></button>
+<input type="button" id="branah-aidu" class="btn btn-default" value="&#3244;" onclick="input(this);"></button>
+<input type="button" id="branah-aaru" class="btn btn-default" value="&#3233;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3218;" onclick="input(this);"></button>
+
+<input type="button" id="branah-elu" class="btn btn-default" value="&#3243;" onclick="input(this);"></button>
+<input type="button" id="branah-entu" class="btn btn-default" value="&#3226;" onclick="input(this);"></button>
+<input type="button" id="branah-ombattu" class="btn btn-default" value="&#3229;" onclick="input(this);"></button>
+<input type="button" id="branah-tha" class="btn btn-default" value="&#3219;" onclick="input(this);"></button>
+
+<input type="button" id="branah-sonne" class="btn btn-default" value="&#3234;" onclick="input(this);"></button>
+<input type="button" id="bkspace" class="btn btn-danger" value="Backspace" onclick="del();"></button>
+<input type="button" id="onespace" class="btn btn-default btn-md" value="SPACE" onclick="space();"></button>
+</div>
+</div>
+
+</table>
+</div>
+</form>
+</body>
+</html>
